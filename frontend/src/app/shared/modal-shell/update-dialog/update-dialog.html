@@ -1,0 +1,12 @@
+<div class="dialog-header">
+  <h2 mat-dialog-title>{{ 'UPDATE.TITLE' | translate }}</h2>
+</div>
+
+<mat-dialog-content>
+  <p class="confirm-text">{{ 'UPDATE.CONFIRM_TEXT' | translate }}</p>
+
+  <div class="dialog-buttons">
+    <button class="btn btn-cancel" (click)="onDismiss()">{{ 'UPDATE.LATER' | translate }}</button>
+    <button class="btn btn-delete" (click)="onReload()">{{ 'UPDATE.RELOAD' | translate }}</button>
+  </div>
+</mat-dialog-content>
