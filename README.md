@@ -97,12 +97,32 @@ ng serve
 
 ## Screenshots
 
-### Home / Product Listing
+### Install Button & Prompt
 
-### Store Locator Map
+*Navbar install button (shown once the browser fires `beforeinstallprompt`) and the resulting native install dialog.*
 
-### Install Prompt
+### App Running in Standalone Mode
 
-### Offline Mode
+*ShopsApp launched from the home screen/desktop, running without browser chrome.*
 
-### Update Notification
+### Update Available Dialog
+
+*The reload prompt shown when `SwUpdate` detects a new `VERSION_READY` event.*
+
+### Offline Browsing
+
+*Previously viewed products and images still rendering with the Network tab's "Offline" checkbox enabled.*
+
+### Offline Action Queued
+
+*The "queued while offline" confirmation shown in the add/edit/delete product dialogs when a request fails while offline and is stored for background sync.*
+
+## Notes
+
+ShopsApp has gone through multiple versions as a learning project:
+
+- **Version 1** — a plain PHP + jQuery implementation.
+- **Version 2** — a rebuild using Angular and Laravel.
+- **Version 3** (this version) — focused specifically on making the Version 2 app offline-first and installable as a PWA.
+
+This version was built as part of an internship learning process, aimed at understanding service workers, caching strategies, and background sync in a real-world app.
