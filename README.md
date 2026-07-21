@@ -99,23 +99,58 @@ ng serve
 
 ### Install Button & Prompt
 
-*Navbar install button (shown once the browser fires `beforeinstallprompt`) and the resulting native install dialog.*
+Navbar install button (shown once the browser fires `beforeinstallprompt`) and the resulting native install dialog.
+
+![Install button](screenshots/download.png)
+![Install prompt](screenshots/install.png)
 
 ### App Running in Standalone Mode
 
-*ShopsApp launched from the home screen/desktop, running without browser chrome.*
+ShopsApp launched from the desktop, running in its own window with no browser tabs or address bar.
+
+![Standalone window](screenshots/standalone.png)
+
+### Web App Manifest
+
+`manifest.webmanifest` as inspected in DevTools — standalone display mode, icons, and identity used for installation.
+
+![Manifest](screenshots/manifest.png)
 
 ### Update Available Dialog
 
-*The reload prompt shown when `SwUpdate` detects a new `VERSION_READY` event.*
+The reload prompt shown when `SwUpdate` detects a new `VERSION_READY` event, with "Later" and "Reload" actions.
+
+![Update available dialog](screenshots/update.png)
+
+### Service Worker Registration
+
+`custom-sw.js` registered and running, showing the `sync-products` tag used to trigger background sync.
+
+![Service worker](screenshots/service-worker.png)
 
 ### Offline Browsing
 
-*Previously viewed products and images still rendering with the Network tab's "Offline" checkbox enabled.*
+The app still rendering previously cached products and images with DevTools' "Offline" checkbox enabled.
+
+![Offline mode](screenshots/offline.png)
 
 ### Offline Action Queued
 
-*The "queued while offline" confirmation shown in the add/edit/delete product dialogs when a request fails while offline and is stored for background sync.*
+Adding a product while offline: the request fails, so it's queued locally and the dialog shows a "saved offline" confirmation instead of an error.
+
+![Offline action queued](screenshots/bgsync.png)
+
+### IndexedDB Pending Operations Queue
+
+The queued `add` operation stored in the `ShopsAppDB` → `pendingOperations` object store, waiting for background sync to replay it.
+
+![IndexedDB queue](screenshots/indexdb.png)
+
+### Cache Storage
+
+Angular service worker cache entries for `api-products` and `api-images` data groups, populated per `ngsw-config.json`.
+
+![Cache storage](screenshots/cache-storage.png)
 
 ## Notes
 
